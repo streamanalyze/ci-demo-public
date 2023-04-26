@@ -1,0 +1,9 @@
+validate "my prime"
+    check prime(0) => true
+    check prime(13) => true
+    check prime(4) => null
+    check prime(20) => null
+    check prime(31) => true;
+
+//validate "my prime failing"
+//    check prime(20) => true;

@@ -1,0 +1,13 @@
+/*-*-sql-*-*******************************************************************
+ * sa.engine
+ *
+ * Author: <year> <author>, <company>
+ *
+ * Description: Master file for user model
+ *
+ ****************************************************************************/
+create function prime(Integer n) -> boolean
+    as select true where notany(select d
+       from Integer d
+      where d in range(2,floor(sqrt(n)))
+        and 0 = mod(n,d));
